@@ -1,0 +1,133 @@
+form {
+    display: grid;
+    gap: 1rem;
+    max-width: 560px;
+    margin: 2rem auto 1rem;
+}
+
+.retdem-intro {
+    max-width: 720px;
+    margin: 0 auto 1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.field-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--secondary);
+    letter-spacing: 0.3px;
+    margin-bottom: -0.35rem;
+}
+
+form input,
+form select,
+.btn {
+    font-size: 1rem;
+}
+
+.btn {
+    display: block;
+    max-width: 560px;
+    width: 100%;
+    margin: 0 auto 2rem;
+    background: var(--primary);
+    color: var(--black);
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.btn:hover {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+#past-submissions {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.submissions-section {
+    margin-top: 2.5rem;
+}
+
+.submissions-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.submissions-header h3 {
+    margin-bottom: 0.35rem;
+    color: var(--secondary);
+}
+
+.submissions-header p {
+    margin: 0;
+    color: var(--text-muted);
+}
+
+.submission-item {
+    background: var(--surface-soft);
+    padding: 1.5rem;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--secondary);
+}
+
+.submission-item h4 {
+    margin: 0 0 0.5rem;
+}
+
+.submission-item p {
+    margin: 0.35rem 0;
+}
+
+.submission-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.submission-badge {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0.35rem 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.submission-badge.pending {
+    background: rgba(246, 201, 21, 0.22);
+    color: #715700;
+}
+
+.submission-badge.reviewed {
+    background: rgba(107, 138, 71, 0.16);
+    color: var(--secondary);
+}
+
+.feedback-box {
+    margin-top: 1rem;
+    background: var(--surface);
+    border-radius: 14px;
+    padding: 1rem;
+    border: 1px solid var(--border);
+}
+
+.feedback-box strong {
+    color: var(--secondary);
+}
+
+.empty-submissions {
+    text-align: center;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.82);
+    padding: 1rem;
+    border-radius: 14px;
+}

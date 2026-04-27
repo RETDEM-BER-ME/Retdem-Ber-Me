@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retdem-Ber-Me | RETDEM Checklist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="retdem_checklist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="site-brand">
+        <img src="retdem_logo.png" alt="RETDEM-BER-ME logo" class="site-logo">
+        <h1>Retdem-Ber-Me</h1>
+    </div>
+    <button type="button" class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
+    <nav>
+        <a href="student.html">Home</a>
+        <a href="about_student.html">About</a>
+        <a href="retdem_checklist.html" class="active">RETDEM Checklist</a>
+        <a href="borrow_student.html">Borrow Materials</a>
+        <a href="student_calendar.html">Calendar</a>
+        <a href="FAQs.html">FAQs</a>
+        <button type="button" class="profile-icon" aria-label="Return to login"><i class="fa-solid fa-user"></i></button>
+    </nav>
+</header>
+<script type="module" src="header-standard.js"></script>
+    <main class="card">
+        <h2>RETDEM Checklist</h2>
+        <p class="retdem-intro">Submit your checklist details below. After submission, the entry will appear in <strong>RETDEM Submissions</strong> where you can wait for your Clinical Instructor's feedback.</p>
+        <form id="retdem-form">
+
+    <!-- Procedure -->
+    <label for="ret-proc" class="field-label">Return Demonstration Details</label>
+    <input type="text" id="ret-proc" placeholder="Procedure of Return Demonstration." required>
+
+    <!-- Instructor -->
+    <label for="ret-ci" class="field-label">Instructor for Retdem</label>
+    <select id="ret-ci" required>
+        <option value="" selected disabled>Select Instructor...</option>
+    </select>
+
+    <!-- Date -->
+    <label for="ret-date" class="field-label">Date of Retdem</label>
+    <input type="date" id="ret-date" required>
+
+    <!-- Grade -->
+    <label for="ret-grade" class="field-label">Grade</label>
+    <input type="text" id="ret-grade" placeholder="Enter your grade" required>
+
+    <!-- Button -->
+    <button type="submit" class="btn" form="retdem-form">Submit RETDEM Checklist</button>
+
+</form>
+
+        <section class="submissions-section">
+            <div class="submissions-header">    
+                <h3>RETDEM Submissions</h3>
+                <p>Track submitted checklists and wait for instructor feedback here.</p>
+            </div>
+            <div id="past-submissions"></div>
+        </section>
+    </main>
+    <footer style="text-align:center; padding:1.5rem; font-size:0.9rem; color:var(--text-secondary);">
+    &copy; 2026 Retdem-Ber-Me. All rights reserved.
+    </footer>
+    <script type="module" src="retdem_checklist.js"></script>
+</body>
+</html>
+
+
+
+
+

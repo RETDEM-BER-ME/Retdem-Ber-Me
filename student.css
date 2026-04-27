@@ -1,0 +1,426 @@
+/* student.css */
+body.student-page {
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 26%),
+        radial-gradient(circle at bottom right, rgba(246, 201, 21, 0.14), transparent 24%),
+        linear-gradient(145deg, #f6f2d9 0%, #eef3de 46%, #e4ddbb 100%);
+}
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+.student-shell {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 3rem 2.5rem 4rem;
+}
+
+.student-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.9fr);
+    gap: 2rem;
+    align-items: start;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.hero-main {
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: clamp(2.2rem, 3vw, 3rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.hero-sub {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgba(17, 17, 17, 0.75);
+    max-width: 26ch;
+}
+
+.hero-copy,
+.hero-panel,
+.dashboard-ribbon,
+.feature-card,
+.workflow-section {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+}
+
+.hero-copy {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+    border-radius: 32px;
+    box-shadow: 0 25px 60px rgba(53, 70, 31, 0.18);
+    color: var(--black);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.22), transparent 42%),
+        linear-gradient(135deg, var(--primary) 0%, #bfd79f 45%, var(--accent) 100%);
+}
+
+.hero-copy::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    right: -60px;
+    bottom: -70px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.hero-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.48);
+    border: 1px solid rgba(107, 138, 71, 0.22);
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.hero-copy h2 {
+    margin: 1rem 0 0.9rem;
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    max-width: 12ch;
+}
+
+.hero-intro {
+    max-width: 60ch;
+    margin: 0.5;
+    font-size: 1.02rem;
+    line-height: 1.6;
+    color: rgba(17, 17, 17, 0.84);
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 1rem;
+}
+
+.ghost-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 999px;
+    border: 1px solid rgba(17, 17, 17, 0.14);
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.5);
+    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ghost-btn:hover {
+    transform: translateY(-2px);
+    background: var(--secondary);
+    color: var(--white);
+    border-color: var(--secondary);
+    box-shadow: 0 12px 24px rgba(53, 70, 31, 0.16);
+}
+
+.hero-panel {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.panel-card,
+.panel-stats article,
+.dashboard-ribbon article,
+.feature-card,
+.workflow-grid article {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(107, 138, 71, 0.12);
+    backdrop-filter: blur(10px);
+}
+
+.panel-card {
+    background: rgba(255,255,255,0.88);
+    padding: 1.8rem;
+    border-radius: 28px;
+}
+
+.panel-label {
+    margin: 0 0 0.6rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.panel-card h3 {
+    margin: 0 0 0.7rem;
+    color: var(--text-main);
+    font-size: 1.65rem;
+    line-height: 1.15;
+}
+
+.panel-card p,
+.panel-stats span,
+.dashboard-ribbon p,
+.feature-card p,
+.workflow-grid p {
+    color: var(--text-muted);
+}
+
+.panel-card p {
+    margin: 0;
+    line-height: 1.8;
+}
+
+.panel-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.panel-stats article {
+    padding: 1.35rem;
+    border-radius: 22px;
+}
+
+.panel-stats strong,
+.workflow-grid h4,
+.feature-card h3 {
+    display: block;
+    color: var(--text-main);
+}
+
+.panel-stats span {
+    display: block;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+.dashboard-ribbon {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-ribbon article {
+    background: rgba(255,255,255,0.75);
+    padding: 1.2rem 1.25rem;
+    border-radius: 22px;
+}
+
+.ribbon-label,
+.section-heading span,
+.feature-card a {
+    color: var(--secondary);
+}
+
+.ribbon-label {
+    display: inline-block;
+    margin-bottom: 0.55rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.dashboard-ribbon p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card {
+    background: rgba(255,255,255,0.95);
+    position: relative;
+    padding: 1.75rem;
+    border-radius: 26px;
+}
+
+.intro-card {
+    grid-column: span 4;
+}
+
+.checklist-card,
+.borrow-card {
+    grid-column: span 4;
+}
+
+.card-icon {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    color: var(--black);
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    box-shadow: 0 12px 22px rgba(107, 138, 71, 0.18);
+}
+
+.feature-card h3 {
+    margin: 0 0 0.7rem;
+    font-size: 1.22rem;
+    line-height: 1.2;
+}
+
+.feature-card p {
+    margin: 0;
+    line-height: 1.82;
+}
+
+.feature-card a {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.feature-card:hover,
+.panel-stats article:hover,
+.dashboard-ribbon article:hover {
+    transform: translateY(-4px);
+    transition: 0.25s ease;
+    box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+.workflow-section {
+    padding: 2rem;
+    border-radius: 32px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(245, 240, 215, 0.96));
+}
+
+.section-heading span {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.section-heading h3 {
+    margin: 0.5rem 0 0;
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: clamp(1.9rem, 3vw, 2.8rem);
+    color: var(--text-main);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+}
+
+.workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.3rem;
+}
+
+.workflow-grid article {
+    padding: 1.4rem;
+    border-radius: 24px;
+}
+
+.workflow-grid h4 {
+    margin: 0 0 0.65rem;
+    font-size: 1.05rem;
+}
+
+.workflow-grid p {
+    margin: 0;
+    line-height: 1.8;
+}
+
+@media (max-width: 980px) {
+    .student-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-ribbon {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-card,
+    .checklist-card,
+    .borrow-card {
+        grid-column: span 6;
+    }
+
+    .workflow-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .student-shell {
+        padding: 1.25rem 0.9rem 2rem;
+    }
+
+    .hero-copy,
+    .workflow-section,
+    .dashboard-ribbon article,
+    .feature-card,
+    .panel-card,
+    .panel-stats article {
+        border-radius: 20px;
+    }
+
+    .hero-copy {
+        padding: 1.6rem;
+    }
+
+    /* 👇 ADD IT HERE */
+    .hero-copy h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-intro {
+        font-size: 0.95rem;
+    }
+
+    .hero-copy h2 {
+        max-width: none;
+    }
+
+    .panel-stats,
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-card,
+    .checklist-card,
+    .borrow-card {
+        grid-column: 1 / -1;
+    }
+
+    .hero-actions .btn,
+    .hero-actions .ghost-btn {
+        width: 100%;
+    }
+}
+.hero-copy h2,
+.hero-sub,
+.hero-intro {
+    max-width: 100%;
+}

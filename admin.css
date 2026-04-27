@@ -1,0 +1,151 @@
+/* --- TABS NAVIGATION --- */
+.user-tabs {
+    background: #f3f4f6; /* Light gray background for tab container */
+    padding: 0.4rem;
+    border-radius: 8px;
+    display: inline-flex;
+    margin: 0 auto 2rem auto;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #4b5563;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+    color: #111827;
+}
+
+.tab-btn.active {
+    background: #ffffff;
+    color: #111827;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* --- SEARCH & FILTERS --- */
+input[type="text"], select {
+    padding: 0.6rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: #ffffff;
+    color: #374151;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15); /* Modern blue focus ring */
+}
+
+/* --- USER CARDS --- */
+.user-list {
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem; /* Space between cards */
+}
+
+.user-card {
+    background: #ffffff;
+    padding: 1.2rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+    
+    /* Flexbox layout to push buttons to the right */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; /* Keeps it mobile responsive */
+    gap: 1rem;
+}
+
+.user-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-color: #d1d5db;
+}
+
+/* --- USER INFO (LEFT SIDE) --- */
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.user-info strong {
+    font-size: 1.1rem;
+    color: #111827;
+}
+
+.user-email {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+.student-details-container {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.4rem;
+}
+
+.user-detail-badge {
+    font-size: 0.8em;
+    background: #f3f4f6;
+    color: #4b5563;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.year-badge {
+    background: #ecfdf5; /* Soft green */
+    color: #059669;
+}
+
+/* --- BUTTONS (RIGHT SIDE) --- */
+.user-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.edit-btn, .delete-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.edit-btn {
+    background-color: #ffffff;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+.edit-btn:hover {
+    background-color: #f3f4f6;
+    border-color: #9ca3af;
+}
+
+.delete-btn {
+    background-color: #fef2f2; /* Soft red background */
+    color: #dc2626; /* Red text */
+    border: 1px solid #fecaca; /* Red border */
+}
+
+.delete-btn:hover {
+    background-color: #fee2e2;
+    border-color: #f87171;
+}

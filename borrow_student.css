@@ -1,0 +1,154 @@
+form {
+    display: grid;
+    gap: 1rem;
+    max-width: 560px;
+    margin: 2rem auto;
+}
+
+.borrow-intro,
+.section-note {
+    max-width: 720px;
+    margin: 0 auto 1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.field-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--secondary);
+    letter-spacing: 0.3px;
+    margin-bottom: -0.35rem;
+}
+
+#request-status,
+#returns {
+    margin-top: 2rem;
+}
+
+.borrow-item,
+.request-status-card {
+    background: var(--surface-soft);
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--secondary);
+}
+
+.borrow-item p,
+.request-status-card p {
+    margin: 0.4rem 0;
+    color: var(--text-muted);
+}
+
+.request-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.request-top h4,
+.borrow-item h4 {
+    margin: 0;
+    color: var(--text-main);
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 110px;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.86rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+}
+
+.status-badge.pending {
+    background: rgba(246, 201, 21, 0.22);
+    color: #7b5e00;
+}
+
+.status-badge.approved {
+    background: rgba(46, 125, 50, 0.18);
+    color: #1b5e20;
+}
+
+.status-badge.rejected {
+    background: rgba(198, 40, 40, 0.18);
+    color: #b71c1c;
+}
+
+.status-badge.canceled,
+.status-badge.returned {
+    background: rgba(55, 71, 79, 0.14);
+    color: #37474f;
+}
+
+.request-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.action-btn {
+    border: none;
+    border-radius: 12px;
+    padding: 0.8rem 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.action-btn.cancel {
+    background: var(--accent);
+    color: var(--black);
+}
+
+.action-btn.delete {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.return-form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 16px;
+    margin-top: 1rem;
+    border: 1px solid var(--border);
+}
+
+.return-form input {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+.empty-state {
+    text-align: center;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.72);
+    border-radius: 14px;
+    padding: 1rem;
+}
+
+@media (max-width: 640px) {
+    .request-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .request-actions {
+        flex-direction: column;
+    }
+
+    .action-btn {
+        width: 100%;
+    }
+}

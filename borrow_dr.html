@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retdem-Ber-Me | Borrow Approvals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="dr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="site-brand">
+            <img src="retdem_logo.png" alt="RETDEM-BER-ME logo" class="site-logo">
+            <h1>Retdem-Ber-Me</h1>
+        </div>
+    <button type="button" class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
+    <nav>
+            <a href="dr.html">Home</a>
+            <a href="about_dr.html">About</a>
+            <a href="borrow_dr.html" class="active" >Borrowing Approvals</a>
+            <a href="dr_calendar.html">Calendar</a>
+            <button type="button" class="profile-icon" aria-label="Return to login"><i class="fa-solid fa-user"></i></button>
+        </nav>
+    </header>
+<script type="module" src="header-standard.js"></script>
+    <main>
+        <div id="home-content"></div>
+        <section id="approvals" class="card">
+            <h2 style="color: var(--secondary)">Pending Material Requests</h2>
+            <div id="pending-requests-container"></div>
+        </section>
+        <section id="returned-items" class="card" style="margin-top:2rem;">
+            <h2 style="color: var(--secondary)">Returned Items</h2>
+            <div id="returned-items-container"></div>
+        </section>
+    </main>
+    <script type="module" src="dr.js"></script>
+    <footer style="text-align:center; padding:1.5rem; font-size:0.9rem; color:var(--text-secondary);">
+    &copy; 2026 Retdem-Ber-Me. All rights reserved.
+    </footer>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retdem-Ber-Me | Borrow Materials</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="borrow_student.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="site-brand">
+        <img src="retdem_logo.png" alt="RETDEM-BER-ME logo" class="site-logo">
+        <h1>Retdem-Ber-Me</h1>
+    </div>
+    <button type="button" class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
+    <nav>
+        <a href="student.html">Home</a>
+        <a href="about_student.html">About</a>
+        <a href="retdem_checklist.html">RETDEM Checklist</a>
+        <a href="borrow_student.html" class="active">Borrow Materials</a>
+        <a href="student_calendar.html">Calendar</a>
+        <a href="FAQs.html">FAQs</a>
+        <button type="button" class="profile-icon" aria-label="Return to login"><i class="fa-solid fa-user"></i></button>
+    </nav>
+</header>
+<script type="module" src="header-standard.js"></script>
+    <main class="card">
+        <h2>Borrowing of Materials</h2>
+        <p class="borrow-intro">Submit the items you need together with your preferred borrowing schedule. The DR handler will review the request and decide whether to approve or reject it.</p>
+       <form id="borrow-form">
+
+    <!-- Return Demonstration -->
+    <label for="bor-proc" class="field-label">Return Demonstration Details</label>
+    <input type="text" id="bor-proc" placeholder="Procedure of Return Demonstration." required>
+
+    <!-- Instructor -->
+    <label for="bor-ci" class="field-label">Instructor for Retdem</label>
+    <select id="bor-ci" required>
+        <option value="" disabled selected>Select Instructor...</option>
+    </select>
+
+    <!-- Date -->
+    <label for="bor-date" class="field-label">Date of Use</label>
+    <input type="date" id="bor-date" required>
+
+    <!-- Items -->
+    <label for="bor-items" class="field-label">Items to Borrow</label>
+    <input type="text" id="bor-items" placeholder="Name of Item/s (eg. Lab Coat, Stethoscope)" required>
+
+    <!-- Time -->
+    <label for="bor-time" class="field-label">Borrow Time</label>
+    <input type="time" id="bor-time" required>
+
+    <!-- Return Date -->
+    <label for="bor-return-date" class="field-label">Return Date</label>
+    <input type="date" id="bor-return-date" required>
+
+    <!-- Button -->
+    <button type="submit" class="btn">Request Items</button>
+
+</form>
+
+        <section id="request-status" class="card">
+            <h3>Pending Requests</h3>
+            <p class="section-note">Track all submitted requests here. Pending requests can be canceled. Approved, rejected, or canceled messages can be deleted from your view.</p>
+            <div id="student-requests-container"></div>
+        </section>
+
+        <section id="returns" class="card">
+            <h3>Follow-up: Return Approved Materials</h3>
+            <p class="section-note">Complete this form once you have returned your approved items.</p>
+            <div id="approved-returns-container"></div>
+        </section>
+    </main>
+    <footer style="text-align:center; padding:1.5rem; font-size:0.9rem; color:var(--text-secondary);">
+    &copy; 2026 Retdem-Ber-Me. All rights reserved.
+    </footer>
+    <script type="module" src="borrow_student.js"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+.login-header-modern {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 1.1rem;
+    border-radius: 28px;
+}
+
+.login-glass {
+    background: rgba(255, 255, 255, 0.84);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(107, 138, 71, 0.2);
+    border-radius: 28px;
+    padding: 2.8rem 2.6rem 2.4rem;
+    max-width: 480px;
+    width: min(92vw, 480px);
+    box-shadow: 0 24px 50px rgba(53, 70, 31, 0.14);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.login-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.72);
+    padding: 0.35rem;
+    box-shadow: var(--shadow-soft);
+    flex-shrink: 0;
+}
+
+
+
+.login-quote-modern {
+    font-size: 1.28rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.45rem;
+    text-align: center;
+}
+
+.login-desc-modern {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    text-align: center;
+    max-width: 30ch;
+}
+
+.login-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-bg,
+.login-glass,
+.login-header-modern,
+.login-quote-modern,
+.login-desc-modern,
+.login-main,
+.login-form-modern {
+    position: relative;
+    z-index: 1;
+}
+
+.login-bg {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 1.2rem;
+}
+
+.login-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(rgba(234, 227, 192, 0.68), rgba(234, 227, 192, 0.56)),
+        url('bg.png') center / cover no-repeat;
+    filter: blur(5px);
+    transform: scale(1.04);
+    z-index: 0;
+}
+
+.login-form-modern {
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(107, 138, 71, 0.14);
+    border-radius: 20px;
+    box-shadow: 0 14px 30px rgba(53, 70, 31, 0.08);
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.login-form-modern input,
+.login-form-modern select {
+    background: rgba(255, 255, 255, 0.92);
+}
+
+.login-btn-modern {
+    width: 100%;
+    padding: 0.95rem 0;
+    background: var(--primary);
+    color: var(--black);
+    font-size: 1.05rem;
+    font-weight: 800;
+    border: none;
+    border-radius: 14px;
+    margin-top: 0.15rem;
+    margin-bottom: 0.45rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.login-btn-modern:hover,
+.login-btn-modern:focus {
+    background: var(--secondary);
+    color: var(--white);
+    box-shadow: 0 16px 24px rgba(53, 70, 31, 0.16);
+    transform: translateY(-2px);
+}
+
+.form-toggle-text-modern {
+    font-size: 0.96rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.form-toggle-text-modern a {
+    color: var(--secondary);
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.form-toggle-text-modern a:hover {
+    color: var(--black);
+}
+
+.auth-error-modern {
+    color: #8a2c00;
+    font-size: 0.95rem;
+    min-height: 1.2em;
+    margin: 0.2rem 0 0;
+    text-align: center;
+}
+
+.spinner {
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    border-top: 2px solid var(--black);
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.login-btn-modern.loading {
+    opacity: 0.8;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+@media (max-width: 600px) {
+    .login-glass {
+        padding: 2.1rem 1.2rem 1.6rem;
+        border-radius: 22px;
+    }
+
+    .login-logo-wrap {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .login-form-modern {
+        padding: 1.2rem;
+    }
+}
+
+/* Password field styling */
+        .password-field {
+            position: relative;
+            width: 100%;
+        }
+
+        .password-field input {
+            width: 100%;
+            padding-right: 40px;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #888;
+        }
+
+        .toggle-password:hover {
+            color: #000;
+        }
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex; /* Script toggles display between 'none' and 'flex' */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-glass {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.secondary-btn {
+    background: #e0e0e0;
+    margin-top: 0.5rem;
+}
+
+.secondary-btn:hover {
+    background: #d0d0d0;
+    color: black;
+}
+
+/* Fix for the Remember Me and Forgot Password layout */
+.remember-me-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Pushes checkbox to left, link to right */
+    align-items: center;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.9rem;
+}
+
+.remember-me-label {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between checkbox and text */
+    cursor: pointer;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+/* Ensure the checkbox itself isn't hidden by global styles */
+#remember-me {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.forgot-password-link {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.forgot-password-link:hover {
+    text-decoration: underline;
+}

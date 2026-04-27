@@ -1,0 +1,33 @@
+.calendar-page .card {
+    padding: 1.5rem;
+}
+
+.calendar-topbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.calendar-action {
+    background: var(--accent);
+    color: var(--black);
+    border: none;
+    border-radius: 12px;
+    padding: 0.8rem 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.calendar-action:hover {
+    background: #d8b000;
+}
+
+#calendar-container {
+    min-height: 650px;
+}
+
+@media (max-width: 768px) {
+    #calendar-container {
+        min-height: 540px;
+    }
+}

@@ -1,0 +1,113 @@
+.request-card {
+    background: rgba(0, 0, 0, 0.95);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.request-info {
+    padding: 1.5rem;
+    background: var(--surface-soft);
+}
+
+.request-info h4 {
+    margin: 0 0 1rem;
+    color: var(--secondary);
+}
+
+.approval-form {
+    padding: 1.5rem;
+}
+
+.approval-form label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.approval-form input {
+    margin-bottom: 1rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-approve {
+    background: var(--primary);
+    color: var(--black);
+    flex: 1;
+    border: none;
+    border-radius: 12px;
+    padding: 0.85rem 1rem;
+    font-weight: 700;
+}
+
+.btn-approve:hover {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.btn-reject {
+    background: var(--accent);
+    color: var(--black);
+    flex: 1;
+    border: none;
+    border-radius: 12px;
+    padding: 0.85rem 1rem;
+    font-weight: 700;
+}
+
+.btn-reject:hover {
+    background: #d8b000;
+}
+
+@media (max-width: 768px) {
+    .button-group {
+        flex-direction: column;
+    }
+}
+
+/* Container for the request card */
+.request-card {
+    position: relative; /* Essential for absolute positioning of the button */
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    padding-top: 10px; /* Add space so text doesn't hit the button */
+}
+
+/* Red Delete Button styling */
+.btn-delete-red {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #c0392b; /* Nice deep red */
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    z-index: 10;
+}
+
+.btn-delete-red:hover {
+    background: #e74c3c; /* Brighter red on hover */
+}
+
+/* Remove the old approval-form padding for the returned items tab 
+   to keep the layout clean since the button moved up */
+#returned-items-container .approval-form {
+    padding: 0;
+    height: 0;
+}

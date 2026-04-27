@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retdem-Ber-Me | RETDEM Masterlist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="ci.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="site-brand">
+            <img src="retdem_logo.png" alt="RETDEM-BER-ME logo" class="site-logo">
+            <h1>Retdem-Ber-Me</h1>
+        </div>
+        <button type="button" class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
+        <nav>
+            <a href="ci.html">Home</a>
+            <a href="about_ci.html">About</a>
+            <a href="retdem_masterlist.html" class="active">RETDEM Masterlist</a>
+            <button type="button" class="profile-icon" aria-label="Return to login"><i class="fa-solid fa-user"></i></button>
+        </nav>
+    </header>
+<script type="module" src="header-standard.js"></script>
+    <main>
+        <section id="masterlist" class="card">
+            <h2 style="color: var(--secondary)">Student Submissions (Masterlist)</h2>
+            <div class="masterlist-filter-bar">
+                <div class="masterlist-filter-group">
+                    <label for="student-name-filter" class="masterlist-filter-label">Filter by Student Name</label>
+                    <input type="text" id="student-name-filter" class="masterlist-filter-input" placeholder="Search student name...">
+                </div>
+                <div class="masterlist-filter-group">
+                    <label for="year-level-filter" class="masterlist-filter-label">Filter by Year Level</label>
+                    <select id="year-level-filter" class="masterlist-filter-select">
+                        <option value="all">All Year Levels</option>
+                        <option value="1st Year">1st Year</option>
+                        <option value="2nd Year">2nd Year</option>
+                        <option value="3rd Year">3rd Year</option>
+                        <option value="4th Year">4th Year</option>
+                    </select>
+                </div>
+            </div>
+            <div id="year-filter-empty" class="masterlist-empty" style="display: none;">No student folders match the selected filters.</div>
+            <div id="student-folders-container"></div>
+        </section>
+    </main>
+    <footer style="text-align:center; padding:1.5rem; font-size:0.9rem; color:var(--text-secondary);">
+    &copy; 2026 Retdem-Ber-Me. All rights reserved.
+    </footer>
+    <script type="module" src="ci.js"></script>
+</body>
+</html>
